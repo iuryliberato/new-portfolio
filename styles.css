@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    background-color: 	
+    rgb(255,250,243);
+    font-family: "Inclusive Sans", sans-serif;;
+}
+html {
+    scroll-behavior: smooth;
+  }
+/* Fixed navbar */
+nav {
+    position: fixed;      /* 🔒 stays in place */
+    top: 0;               /* align at top */
+    left: 0;
+    width: 100%;          /* full width */
+    background-color: 	
+    rgb(255,250,243);
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    z-index: 1000;    
+  }
+.navList {
+    display: flex;
+    justify-content: end;
+    padding: 0 70px;
+ 
+}
+.list-nav-items {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #2d394e;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+   &::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: rgb(245,121,67);
+        left: 50%;
+        bottom: -5px;
+        transition: all 0.1s ease-in-out;
+      }
+      &:hover::after{
+        left: 0;
+        width: 100%;
+      }
+}
+header {
+    display: flex;
+    padding: 150px 50px;
+}
+.hello-img{
+    max-width: 50%;
+}
+.intro-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   width: 40%;
+   padding: 0 30px 0 0;
+}
+.hello-message {
+    font-size: 40px;
+    margin: 10px 0px;
+}
+.my-name {
+    color: rgb(245,121,67);
+}
+
+
+.subtitle {
+    font-size: 40px;
+    color: #2d394e;
+    display: flex;
+    justify-content: center;
+}
+
+.about-me {
+    background-color: #FFF7E6;
+    display: flex;
+    flex-direction: column;
+    padding: 7%;
+}
+.intro {
+    margin-bottom: 0;
+}
+.wrapping-paragraphs-img {
+    display: flex;
+}
+
+.projects {
+    background-color: 	
+    rgb(255,250,243);
+}
+.type-blink {
+    font: 600 1.25rem/1.4 "JetBrains Mono", monospace;
+    font-size: 40px;
+    width: calc(var(--n) * 1ch);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid currentColor; /* caret */
+    animation:
+      typing 2.5s steps(var(--n)) 0.2s forwards, /* type once */
+      blink 800ms steps(1) infinite;              /* caret blinks forever */
+  }
+  
+  /* reveal characters one by one */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: calc(var(--n) * 1ch) }
+  }
+  
+  /* caret blink */
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+}
+.yarn {
+    height: 50px;
+}
+
+footer{
+    background-color: #F7EDDF;
+    text-align: center;
+    padding: 1rem 0;
+    height: 200px
+}
