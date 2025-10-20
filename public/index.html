@@ -11,20 +11,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:wght@300..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-
-
-
+  <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- ===== NAV (built by JS) ===== -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main">
     <div class="container nav__wrap">
       <ul class="nav__list" id="nav"></ul>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" type="button">☰</button>
     </div>
   </nav>
+
   <!-- Full-screen overlay menu -->
   <div id="mobile-menu" class="mobile-menu" hidden>
     <nav class="mobile-menu__content" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
@@ -34,15 +34,18 @@
   </div>
 
   <!-- ===== HERO ===== -->
-    </div>
-  </nav>
-
-  <!-- ===== HERO ===== -->
   <header id="home" class="hero container section">
     <img class="hero__img" src="./images/hello.png" alt="Hand saying hello" />
     <div>
-      <h1 class="hero__title"><span id="type-target" data-text="Olá, I’m Iury,">Olá, I’m Iury,</span> <span class="visually-hidden">—</span></h1>
-      <p class="hero__para">A Brazilian <b>Web Developer</b> living and working in <b>London</b>. I’m currently looking for my first role as a Web Developer after working as a <b>Teaching Assistant for General Assembly</b>.</p>
+      <h1 class="hero__title">
+        <span id="type-target" data-text="Olá, I’m Iury,">Olá, I’m Iury,</span>
+        <span class="sr-only">—</span>
+      </h1>
+      <p class="hero__para">
+        A Brazilian <b>Web Developer</b> living and working in <b>London</b>.
+        I’m currently looking for my first role as a Web Developer after working as a
+        <b>Teaching Assistant for General Assembly</b>.
+      </p>
     </div>
   </header>
 
@@ -53,7 +56,7 @@
       <div class="about__grid">
         <div class="stack">
           <p>I’m Iury, a <b>Web Developer</b> based in London. After seven years in hospitality—learning to be a <b>valuable team member</b> and to <b>solve problems under pressure</b>—I felt ready for a career change.</p>
-          <p>Self‑teaching led me to build a personal website and discover a <b>passion for Web Development</b>. I then joined the General Assembly immersive bootcamp to prepare for my first dev role.</p>
+          <p>Self-teaching led me to build a personal website and discover a <b>passion for Web Development</b>. I then joined the General Assembly immersive bootcamp to prepare for my first dev role.</p>
           <p>I love coding because it lets me be <b>creative, curious, and constantly learning</b>. After finishing the course, I worked as a <b>Teaching Assistant</b> at GA for two years—and now I’m looking for my <b>first role as a Web Developer</b>.</p>
         </div>
         <img class="hero__img" src="./images/working.png" alt="Developer working at a desk" />
@@ -69,49 +72,50 @@
     </div>
   </section>
 
-  <!-- ===== PROJECTS (example grid, easy to feed via JS later) ===== -->
+  <!-- ===== PROJECTS ===== -->
   <section id="projects" class="projects section">
     <div class="container">
-    <h2 class="subtitle">Projects</h2>
-    <div class="projects__grid" id="projects-grid"></div>
+      <h2 class="subtitle">Projects</h2>
+      <div class="projects__grid" id="projects-grid"></div>
     </div>
-    </section>
+  </section>
 
   <!-- ===== FOOTER ===== -->
   <footer id="contact-me">
     <form id="contact-form" class="contact">
       <p class="subtitle"><b>Contact Me</b></p>
       <p>I'm currently available for work — feel free to contact me for a chat!</p>
+
       <!-- Honeypot (spam trap) -->
       <input type="text" name="company" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute; left:-10000px;">
-  
+
       <label>
         Name
-        <input type="text" name="from_name" required placeholder="Your name">
+        <input type="text" name="from_name" required placeholder="Your name" autocomplete="name">
       </label>
-  
+
       <label>
         Email
-        <input type="email" name="reply_to" required placeholder="you@example.com">
+        <input type="email" name="reply_to" required placeholder="you@example.com" autocomplete="email">
       </label>
-  
+
       <label>
         Message
         <textarea name="message" required rows="5" placeholder="Message..."></textarea>
       </label>
-  
-      <button id="send-btn" type="submit">Send</button>
-      <p id="form-status" aria-live="polite"></p>
-    </form>
-    <div class="footer-links">
-        <a href="mailto:..."><i class="fa-solid fa-envelope links"></i></a>
-        <a href="https://linkedin.com/..."><i class="fa-brands fa-linkedin links"></i></a>
-        <a href="https://github.com/..."><i class="fa-brands fa-github links"></i></a>
-        </div>
-        <p class="copy">&copy; Iury Liberato 2024</p>
-  </footer>
 
-  <script defer src="app.js"/>
-  
+      <button id="send-btn" type="submit">Send</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="footer-links" aria-label="Social links">
+      <a href="mailto:..." class="links" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://linkedin.com/..." class="links" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/..." class="links" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+
+    <p class="copy">&copy; Iury Liberato 2025</p>
+  </footer>
+  <script type="module" src="../src/main.js"></script>
 </body>
 </html>
