@@ -34,7 +34,7 @@
 
   .container{ max-width: var(--container); margin-inline: auto; padding-inline: var(--space-3); }
   .section{ padding: clamp(5rem, 8vh, 7rem) 0; }
-  .subtitle{ font-size: var(--fs-h2); text-align: center; margin: 0 0 var(--space-4); }
+  .subtitle{ font-size: var(--fs-h2); text-align: center; margin: 0 0 var(--space-4); padding-bottom: 30px;}
 
   /* ===== Nav (fixed) ===== */
   .nav{ position: sticky; top: 0; z-index: 1000; background: var(--bg); border-bottom: 1px solid #0001; }
@@ -57,6 +57,92 @@
 
   /* Type cursor (toggled by JS) */
   .cursor{ border-right: 2px solid currentColor; animation: blink 800ms steps(1) infinite; }
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  
+  .reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card__media {
+    overflow: hidden;
+    border-radius: var(--radius);
+  }
+  
+  .card__media video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: .5rem 0 0;
+  }
+  
+  .badge {
+    font-size: .85rem;
+    font-weight: 600;
+    padding: .35rem .6rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid #0001;
+  }
+  .btns {
+    display: flex;
+    gap: .6rem;
+    margin-top: .75rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .65rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease,
+                box-shadow .15s ease,
+                background .15s ease,
+                color .15s ease;
+    border: 1px solid transparent;
+  }
+  
+  .btn:active {
+    transform: translateY(1px);
+  }
+  
+  .btn--accent {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 6px 18px #00000012;
+    height: 40px;
+  }
+  
+  .btn--accent:hover {
+    box-shadow: 0 10px 24px color-mix(in oklab, var(--accent), transparent 70%);
+  }
+  
+  .btn--outline {
+    background: transparent;
+    color: var(--accent);
+    border-color: color-mix(in oklab, var(--accent), black 10%);
+    height: 40px;
+  }
+  
+  .btn--outline:hover {
+    background: color-mix(in oklab, var(--accent), transparent 90%);
+  }
+
   @keyframes blink{ 50%{ border-color: transparent; } }
 
   /* ===== About ===== */
@@ -77,6 +163,14 @@
   .card{ background: #fff; border: 1px solid #00000010; border-radius: var(--radius); padding: 1rem; box-shadow: 0 8px 22px #0000000c; display: grid; gap: .5rem; }
   .card h3{ margin: .25rem 0; }
   .card p{ margin: 0; color: var(--muted); font-size: .98rem; }
+  /* Buttons */
+.btns{ display:flex; gap:.6rem; margin-top:.75rem; flex-wrap:wrap; }
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.65rem 1rem; border-radius:999px; font-weight:700; text-decoration:none; transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease; border:1px solid transparent; }
+.btn:active{ transform: translateY(1px); }
+.btn--accent{ background: var(--accent); color:#fff; box-shadow: 0 6px 18px #00000012; }
+.btn--accent:hover{ box-shadow: 0 10px 24px color-mix(in oklab, var(--accent), transparent 70%); }
+.btn--outline{ background: transparent; color: var(--accent); border-color: color-mix(in oklab, var(--accent), black 10%); }
+.btn--outline:hover{ background: color-mix(in oklab, var(--accent), transparent 90%); }
 
   /* ===== Footer ===== */
   footer{ background: var(--bg-footer); text-align: center; padding: 5rem 15px 4rem; }
