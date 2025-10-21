@@ -10,7 +10,7 @@ export const PROJECTS = [
     },
     {
       title: "EVE Events",
-      desc: "React front-end with Styled-Components and a Python/Django back-end. Users can sign up/login (including Google), switch light/dark themes, search & filter events, RSVP, and create/manage their own events from their profile.",
+      desc: "This is a React front-end with app Styled-Components and a Python/Django back-end. Users can sign up/login (including Google), switch light/dark themes, search & filter events, RSVP, and create/manage their own events from their profile.",
       video: "../../public/videos/EventsVideo.mp4",
       live: "https://eve-social-events.herokuapp.com/",
       git: "https://github.com/iuryliberato/events",
