@@ -127,7 +127,7 @@
     margin: 0.5rem 0 0;
   }
   .badge {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     font-weight: 600;
     padding: 0.35rem 0.6rem;
     border-radius: 999px;
@@ -163,7 +163,7 @@
     background: var(--accent);
     color: #fff;
     box-shadow: 0 6px 18px #00000012;
-    height: 40px;
+    height: 35px;
   }
   .btn--accent:hover {
     box-shadow: 0 10px 24px color-mix(in oklab, var(--accent), transparent 70%);
@@ -172,7 +172,7 @@
     background: transparent;
     color: var(--accent);
     border-color: color-mix(in oklab, var(--accent), black 10%);
-    height: 40px;
+    height: 35px;
   }
   .btn--outline:hover {
     background: color-mix(in oklab, var(--accent), transparent 90%);
@@ -214,8 +214,8 @@
   .projects { background: var(--bg); }
   .projects__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: var(--space-3);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
   }
   .card {
     background: #fff;
@@ -227,7 +227,7 @@
     gap: 0.5rem;
   }
   .card h3 { margin: 0.25rem 0; }
-  .card p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.8rem; }
   
   /* ===== Footer ===== */
   footer {
